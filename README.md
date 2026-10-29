@@ -127,3 +127,53 @@ python generate_mask10_general.py \
     --output-dir /path/to/Input \
     --preset saxs
 ```
+
+The `--preset` option can be set to `saxs`, `waxd`, `agbio3`, or `usaxs` for the corresponding dataset.
+
+Run the following command to view all available options:
+
+```bash
+python generate_mask10_general.py --help
+```
+
+The generator writes the masked TIFF images to the selected output directory and records the generation parameters and mask statistics in a CSV manifest.
+
+## Dataset Organization in the RCSGF Study
+
+For the SAXS, WAXD, and AgBiO3 datasets, complete experimental patterns were used to construct PGT images containing synthetic detector gaps. Mask 10 was then applied only to the valid observed regions of these PGT images to produce the self-supervised Inputs.
+
+For the USAXS dataset, the experimentally acquired patterns already contain physical detector-module gaps and are therefore used directly as PGT images before artificial masking.
+
+## Public Datasets
+
+The SAXS, WAXD, and AgBiO3 datasets are publicly available from the Science Data Bank:
+
+**DOI:** https://doi.org/10.57760/sciencedb.34110
+
+The USAXS dataset is publicly available from the Science Data Bank:
+
+**DOI:** https://doi.org/10.57760/sciencedb.017rq
+
+## Associated Publications
+
+### RCSGF
+
+**Self-Supervised Gap Filling of Synchrotron SAXS/WAXD Data Based on Reciprocal-Space Continuity**
+
+Bibliographic information and the final DOI can be added after publication.
+
+### TSINet
+
+The TSINet architecture and the FCR, FPMAF, XBSAM, SCAM, and SGALoss components were originally described in:
+
+**A deep learning approach to gap filling for synchrotron SAXS and WAXD patterns**  
+*Journal of Applied Crystallography* (2026), 59.  
+**DOI:** https://doi.org/10.1107/S1600576726009350
+
+## Citation
+
+If you use the RCSGF methodology, Mask 10 generator, or the released implementation materials in academic work, please cite the associated RCSGF paper once its final bibliographic information is available. When using or discussing the TSINet architecture and its component modules, please also cite the corresponding *Journal of Applied Crystallography* article listed above.
+
+## Contact
+
+For questions regarding the released implementation materials or associated datasets, please contact the authors of the corresponding publication.

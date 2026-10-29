@@ -1,0 +1,9 @@
+Python 3.7.16
+PyTorch 1.2.0
+CUDA 10.0.130
+cuDNN 7.6.5
+NumPy 1.19.2
+imageio 2.6.0
+tqdm 4.67.3
+OpenCV 4.13.0
+opencv-python-headless 4.13.0.92
